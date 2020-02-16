@@ -1,0 +1,2 @@
+module sukkiri_Java {
+}
