@@ -29,4 +29,16 @@ public class Hero {
 		System.out.println("GAMEOVER");
 		System.out.println("最終HPは" + this.hp + "でした");
 	}
+	
+	// newで生成された直後に自動で実行される処理メソッド（コンストラクタ）
+	// コンストラクタ条件1.メソッド名がクラス名と完全に等しい
+	// コンストラクタ条件2.メソッド宣言に戻り値が記述されていない
+	public Hero(String name) {
+		this.hp = 100;
+		this.name = name;
+	}
+	public Hero() {
+		// JVMにコンストラクタを呼び出すように依頼する
+		this("ダミー");
+	}
 }
