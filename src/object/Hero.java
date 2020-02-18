@@ -2,11 +2,12 @@ package object;
 
 public class Hero {
 	String name;
-	int hp;
+	int hp = 100;
 	// 勇者が装備している剣の情報
 	Sword sword;
 	
-	public void attack() {
+	// 戦う
+	public void attack(Matango m) {
 		System.out.println(this.name + "は" + sword.name + "で攻撃した！");
 		System.out.println("敵に5ポイントのダメージをあたえた！");
 	}

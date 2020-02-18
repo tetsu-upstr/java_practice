@@ -13,10 +13,14 @@ public class Main {
 		
 		Hero h2 = new Hero();
 		
+		SuperHero sh = new SuperHero();
+		sh.run();
+		
 		// フィールドに初期値を設定
 		h1.sword = s;
 		System.out.println("勇者" + h1.name + "を生み出しました！");
 		System.out.println("勇者" + h2.name + "を生み出しました！");
+		System.out.println("スーパー勇者" + sh.name + "を生み出しました！");
 		System.out.println("現在の武器は" + h1.sword.name);
 		
 		// お化けキノコを生成・初期化
@@ -30,7 +34,7 @@ public class Main {
 		m2.suffix = 'B';
 		
 		// 勇者のメソッドの呼び出し
-		h1.attack();
+		h1.attack(m1);
 		m1.run();
 		m2.run();
 		h1.run();
