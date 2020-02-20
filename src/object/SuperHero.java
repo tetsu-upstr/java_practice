@@ -1,6 +1,7 @@
 package object;
 
 public class SuperHero extends Hero {
+
 	boolean flying;
 	public void fly() {
 		this.flying = true;
@@ -12,9 +13,9 @@ public class SuperHero extends Hero {
 	}
 	// スーパークラスに同じメソッドがあってもオーバーライドで上書きできる
 	public void run() {
-		System.out.println(this.name + "は撤退した！");
+		System.out.println(this.getName() + "は撤退した！");
 	}
-	public void attack(Matango m) {
+	public void attack(Monster m) {
 		// 親インスタンスのメソッドを呼び出す
 		super.attack(m);
 		if(this.flying) {
