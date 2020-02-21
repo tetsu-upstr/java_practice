@@ -8,6 +8,36 @@ public class Hero extends Character {
 	private String name;
 	private int hp = 100;
 	
+	// 同じクラス内のインスタンスでフィールドを共有する時はstatic（クラス変数）
+	static int money;
+	
+	// staticがつくと静的メソッド、クラスメソッドと呼ぶ
+	public static void setRandomMoney() {
+		Hero.money = (int)(Math.random() * 1000);
+	}
+	
+	// toStringのオーバーライド
+	public String toString() {
+		return "名前：" + this.name + "/HP：" + this.hp;
+	}
+	
+	// equals()を定義
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		} 
+		
+		if (o instanceof Hero) {
+			Hero h = (Hero)o;
+			
+			if (this.name.equals(h.name)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	// getterメソッド：privateのフィールドを呼び出す為のメソッド（読み込める）
 	public String getName() {
 		return this.name;

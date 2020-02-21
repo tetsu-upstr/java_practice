@@ -7,12 +7,17 @@ public class Main {
 		s.name = "炎の剣";
 		s.damage = 10;
 		
-		// 勇者インスタンスを生成
 		// クラス名 変数名 = new クラス名();
 		Hero h1 = new Hero();
 		Hero h2 = new Hero();
+		
+		Hero.money = 100;
+		
 		h1.setName("ミナト");
 		h2.setName("アサカ");
+		
+		Dancer d = new Dancer();
+		d.setName("アイカ");
 		
 //		SuperHero sh = new SuperHero();
 		Character c = new SuperHero();
@@ -33,9 +38,12 @@ public class Main {
 		h1.sword = s;
 		System.out.println("勇者" + h1.getName() + "を生み出しました！");
 		System.out.println("勇者" + h2.getName() + "を生み出しました！");
+		System.out.println("ダンサー" + d.getName() + "を生み出しました！");
 		System.out.println("スーパー勇者" + c.getName() + "を生み出しました！");
 		System.out.println("現在の武器は" + h1.sword.name);
-
+		
+		System.out.println(h1.toString());
+		System.out.println(Hero.money);
 		
 		// お化けキノコを生成・初期化
 //		Matango m1 = new Matango(0);
